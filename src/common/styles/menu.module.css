@@ -1,0 +1,49 @@
+.menu {
+
+    height: 100vh;
+    padding: 25px;
+    background-color: black;
+
+    display: grid;
+    grid-template-rows: 60px 150px 40px 45px 1fr;
+    box-sizing: border-box;
+}
+.logo {
+    width: 131px;
+}
+
+.bar {
+    height: 40px;
+
+    color: white;
+    opacity: 0.6;
+
+    display: flex;
+    align-items: center;
+    gap: 17px;
+}
+#icon {
+    color: white;
+    font-size: 23px;
+}
+.text {
+    font-size: 14px;
+    font-weight: 600;
+}
+
+.bar:hover {
+    opacity: 1;
+}
+
+#playlists{
+    border-top: 1px solid rgba( 255,255,255, 0.2);
+}
+
+#playlist{
+    color: white;
+    opacity: 0.5;
+    font-size: 14px;
+}
+#playlist:hover {
+    opacity: 1;
+}
