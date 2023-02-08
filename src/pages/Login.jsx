@@ -23,7 +23,7 @@ export const Login = () => {
             <Logo />
             <div className={theme.formContainer}>
                 <div>
-                    <h1 className={theme.white}>
+                    <h1 className={theme.white} id={theme.title}>
                         To continue, log in to Spotify.
                     </h1>
                     <form>

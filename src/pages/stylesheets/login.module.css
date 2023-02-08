@@ -11,11 +11,11 @@
     height: calc( 100vh - 15vh);
 }
 
-h1 {
+h1#title {
     font-size: 1.1rem;
     text-align: center;
 }
-form {
+form#form {
     min-width: 450px;
     max-width: 450px;
 

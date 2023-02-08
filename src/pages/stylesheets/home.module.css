@@ -3,3 +3,53 @@
     grid-template-columns: 240px 1fr;
     grid-template-rows: 100vh;
 }
+#window {
+    width: 100%;
+    min-height: 100vh;
+    overflow-x: auto;
+    overflow-y: hidden;
+    white-space: nowrap;
+    background-color: grey;
+}
+#bar{
+    position: fixed;
+    top:0px;
+    width: 100%;
+    height: 64px;
+    padding: 0px 20px 0px;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: grey;
+}
+button#mini-profile {
+    /* position: relative;
+
+    height: 32px;
+    border-radius: 16px;
+
+    padding: 0px 10px 0px;
+    gap: 8px;
+
+    display: flex;
+    align-items: center;
+
+    background-color: rgba(0,0,0,.7);
+    cursor: pointer;
+    text-transform: none; */
+    position: relative;
+    height: 32px;
+}
+#mini-profile > span#profile-name {
+    color: white;
+    font-size: 14px;
+    text-align: center;
+    transform: translateY(-10%);
+    font-family: Arial, sans-serif;
+}
+#mini-profile > img#profile-picture {
+    width: 16px;
+    height: 16px;
+    border-radius: 50%;
+}
