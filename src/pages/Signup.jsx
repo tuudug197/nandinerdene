@@ -22,81 +22,81 @@ export const Signup = () => {
     }
 
     return (
-        <div className={styles.signup}>
+        <>
             <Logo />
             <div className={theme.formContainer}>
-                <div>
-                    <h1 className={theme.white}>
+                <form id={ styles["form"]}>
+                    <h1 className={styles.title}>
                         Sign up with your email address
                     </h1>
-                    <form>
-                        <label>
-                            <p className={theme.white}>What's your email?</p>
-                            <input
-                                className={theme.input}
-                                type="email"
-                                value={email}
-                                onChange={(event) =>
-                                    setEmail(event.target.value)
-                                }
-                                placeholder="Enter your email"
-                            />
-                        </label>
+                    <label className={styles.query}>
+                        <p>What's your email?</p>
+                        <input
+                            className={ theme.input}
+                            type="email"
+                            value={email}
+                            onChange={(event) => setEmail(event.target.value)}
+                            placeholder="Enter your email"
+                        />
+                    </label>
 
-                        <label>
-                            <p className={theme.white}>Create a password</p>
-                            <input
-                                className={theme.input}
-                                type="password"
-                                value={password}
-                                onChange={(event) =>
-                                    setPassword(event.target.value)
-                                }
-                                placeholder="Create username"
-                            />
-                        </label>
+                    <label className={styles.query}>
+                        <p>Create a password</p>
+                        <input
+                            className={ theme.input}
+                            type="password"
+                            value={password}
+                            onChange={(event) =>
+                                setPassword(event.target.value)
+                            }
+                            placeholder="Create username"
+                        />
+                    </label>
 
-                        <label>
-                            <p className={theme.white}>
-                                What should we call you?
-                            </p>
-                            <input
-                                className={theme.input}
-                                type="text"
-                                value={username}
-                                onChange={(event) =>
-                                    setUsername(event.target.value)
-                                }
-                                placeholder="Enter a profile name"
-                            />
-                        </label>
-                        <p className={theme.subtitle}>
-                            By clicking on sign-up, you agree to Spotify's
-                            <a href="https://www.spotify.com/mn/legal/end-user-agreement/">
-                                {' '}
-                                Terms and Conditions of Use.
-                            </a>
-                            To learn more about how Spotify collects, uses,
-                            shares and protects your personal data, please see
-                            <a href="https://www.spotify.com/mn/legal/privacy-policy/">
-                                {' '}
-                                Spotify's Privacy Policy.
-                            </a>
-                        </p>
-                        <button onClick={signup}>Sign Up</button>
-                        <hr></hr>
-                        <h1 className={theme.white}>
-                            Already have an account?
-                        </h1>
-                        <button
-                            onClick={() => navigate('/login')}
-                            className={styles.login}
+                    <label className={styles.query}>
+                        <p>What should we call you?</p>
+                        <input
+                            className={ theme.input}
+                            type="text"
+                            value={username}
+                            onChange={(event) =>
+                                setUsername(event.target.value)
+                            }
+                            placeholder="Enter a profile name"
+                        />
+                    </label>
+                    <p className={styles.subtitle}>
+                        By clicking on sign-up, you agree to Spotify's
+                        <a
+                            href="https://www.spotify.com/mn/legal/end-user-agreement/"
+                            className={styles.hypertext}
                         >
-                            Log in
-                        </button>
-                    </form>
-                </div>
+                            {' '}
+                            Terms and Conditions of Use.
+                        </a>
+                        To learn more about how Spotify collects, uses, shares
+                        and protects your personal data, please see
+                        <a
+                            href="https://www.spotify.com/mn/legal/privacy-policy/"
+                            className={styles.hypertext}
+                        >
+                            {' '}
+                            Spotify's Privacy Policy.
+                        </a>
+                    </p>
+                    <button onClick={signup} id={styles["signup"]}>
+                        Sign Up
+                    </button>
+                    <hr />
+                    <h1 className={styles.title}>Already have an account?</h1>
+                    <button
+                        onClick={() => navigate('/login')}
+                        id={styles["redirect"]}
+                    >
+                        Log in
+                    </button>
+                </form>
             </div>
-        </div>
+        </>
     )
 }

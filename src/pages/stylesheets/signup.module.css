@@ -1,57 +1,60 @@
-.signup {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-}
 
+/* macro-elements */
 .formContainer {
     display: flex;
     justify-content: center;
+    align-items: center;
     width: 100%;
-    height: calc(100vh - 10vh);
+    height: 100vh;
+    color: #212529;
 }
-
-h1 {
-    font-size: 1.1rem;
-    text-align: center;
-}
-form {
-    min-width: 450px;
+form#form {
     max-width: 450px;
-
+    min-width: 450px;
+}
+/* label and inputs */
+label.query {
+    width: 100%;
     display: flex;
     flex-direction: column;
-}
-p {
-    font-weight: bolder;
-}
-input {
+} 
+label > input.input {
     height: 32px;
     padding: 6px 12px;
     font-size: 16px;
     font-weight: 400;
     line-height: 1.5;
-    color: #212529;
-    background-color: #fff;
     background-clip: padding-box;
     border: 1px solid rgba(0, 0, 0, 0.4);
     appearance: none;
     border-radius: 5px;
     transition: border-color .15s ease-in-out,box-shadow .15s ease-in-out;
 }
-input:focus {
-    color: #212529;
-    background-color: #fff;
+label > input.input:focus {
     border-color: #86b7fe;
     outline: 0;
     box-shadow: 0 0 0 0.25rem rgb(13 110 253 / 25%);
 }
-label {
-    width: 100%;
-    display: flex;
-    flex-direction: column;
+/* text */
+h1.title {
+    font-size: 1.1rem;
+    text-align: center;
 }
-button {
+p.subtitle {
+    font-weight: 500;
+    font-size: 0.75rem;
+    text-align: center;
+}
+label.query > p {
+    font-weight: bolder;
+}
+a.hypertext {
+    color: #21e065;
+}
+/* button */
+button#signup {
+    margin-top: 20px;
+    width: 100%;
     display: inline-block;
     outline: none;
     cursor: pointer;
@@ -69,26 +72,11 @@ button {
     text-align: center;
     padding: 17px 48px;
     color: #fff;
+    background-color: #1ED760;
     height: 48px;
 }
-button:hover  {
-    transform: scale(1.04);
-}
-p.subtitle {
-    font-weight: 500;
-    font-size: 0.75rem;
-    text-align: center;
-    max-width: 450px;
-}
-a {
-    color: #21e065;
-}
-hr{
+button#redirect {
     width: 100%;
-    border-bottom: 1px solid rgba(0, 0, 0, 0.1);
-    margin: 12px 0px 0px;
-}
-button.login {
     display: inline-block;
     outline: none;
     cursor: pointer;
@@ -110,6 +98,15 @@ button.login {
     background-color: transparent;
     height: 48px;
 }
-button.login:hover{
-    border: 1px solid black;    
+button#redirect:hover {
+    border: 1px solid black;
+}
+button#signup:hover {
+    transform: scale(1.04);
+}
+/* fuck you */
+hr.separator{
+    width: 100%;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+    margin: 12px 0px 0px;
 }

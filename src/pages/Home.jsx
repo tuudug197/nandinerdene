@@ -6,8 +6,8 @@ export const Home = () => {
     return (
         <div className={styles.home}>
             <Menu />
-            <div id={ styles["window"]}>
-                <div id={ styles["bar"]}>
+            <div id={styles['window']}>
+                <div id={styles['bar']}>
                     {/* <button id={ styles["mini-profile"]}>
                         <img src={ profile}  id={ styles["profile-picture"]}/>
                         <span id={styles["profile-name"]}>tuudug</span>
